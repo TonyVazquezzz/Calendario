@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: white;
+}
+
+   {
+    box-sizing: border-box;
+   }
+.contenedor{
+     width: 90%;
+     padding: 15px;
+
+}
+h2{
+  font-style: italic;
+  font-size: 40px;
+  color: white;
+
+}
+#dos{
+background-color: #5570cb;
+border: 1px solid #b2ce96;
+width: 1380px;
+height: 120px;
+position: absolute;
+top:0px;
+z-index: -1;
+}
+
+.formulario{
+  background: white;
+  margin-top: 156px;
+  padding: 3px;
+  position: absolute;
+  left: 440px;
+  border: #5570cb 3px solid;
+
+}
+
+h1{
+   font: bold 90% monospace;
+  text-align: center;
+  color: Black;
+  font-size: 40px;
+}
+h3{
+  font-size: 30px;
+
+}
+table{
+  position: absolute;
+  left: 300px;
+  top: 120px;
+}
+input[type="text"],
+input[type="password"]{
+   font-size: 20px;
+   width: 82%;
+   padding: 10px;
+   border: none;
+
+}
+.input-contenedor{
+  margin-bottom: 12px;
+  border: 1px solid #aaa;
+
+}
+
+.icon{
+
+  text-align:right;
+}
+.button{
+  border: none;
+  width: 100%;
+  color: White;
+  font-size: 21px;
+  background: #011b4f;
+  padding: 15px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+
+}
+.button:hover{
+  background: cadetblue;
+}
+p{
+  text-align: center;
+  font-size: 18px;
+}
+
+.link{
+  text-decoration: none;
+  color: Black;
+  font-weight: 600;
+  font-style: italic;
+}
+.Mensajee{
+
+background-color: #a8ffc9;
+border-radius: 9px;
+padding-top: 20px;
+padding-right: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+
+   color:Black;
+   position: absolute;
+   top:15px;
+   left: 492px;
+   font-size: 20px;
+
+}
+#alert{
+  width: 300px;
+  padding: 5px;
+  background-color: White;
+  color: #0D00A7;
+  display: none;
+}
+.Error{
+  position: absolute;
+  top:93px;
+  left: 470px;
+  color:red;
+  font-family: Georgia;
+
+font-size: 19px;
+font-weight: 10;
+
+margin: 0 0 25px;
+overflow: hidden;
+padding: 10px;
+border-radius: 2px;
+width:255px;
+Height:15.5px;
+margin:100px
+
+
+
+}
+
+}
+
+
+.link:hover{
+  color: cadetblue;
+}
+@media (min-width:768px)
+{
+  .formulario{
+    margin:auto;
+    width: 500px;
+    margin-top: 120px;
+    border-radius: 2.5%
+    color: red;
+  }
+}
+}
