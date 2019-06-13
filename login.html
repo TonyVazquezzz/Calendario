@@ -1,0 +1,181 @@
+<?php
+  if(isset)($_POST['submit'])) {
+    $nombre = $_POST['Nombre'];
+    $Correo = $_POST['Correo'];
+    $Contrasena = $_POST['Contrasena'];
+  }
+
+?>
+<script>
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Registrate</title>
+    <script src="JS/jquery.min.js"></script>
+    <meta name="viewport" content="width=device=width, user- scalable=yes, initial-scale=1.0 maximun-scale=3.0, minium-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="estilos.css">
+    <form action="ingresar.html" method="post">
+
+    </form>
+  </head><center>
+<h2>Full Calendar</h2>
+
+</center>
+<table width="640" border="0" cellspacing="0" cellpadding="1">
+
+
+</tr>
+
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr bgcolor="#FFFFFF">
+<td><h3><h3 align="justify">Full Calendar te permite organizar el control de tus activides de una manera simple, sencilla y eficaz, esto teniendo como resultado una mejoria significativa al final de la realizacion de tus proyectos.<br> Cuenta con una interfaz amigable la cual nos ayudara a una mejor experiencia al realizar tus proyectos</p><br> <center><U>¡REGISTRATE Y COMIENZA A UTILIZARLO GRATIS!</U> </center></h3></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+    <div id="info"></div>
+    <form class="formulario" name="formulario" id ="formulario" action="conexion.php" method="post" onsubmit="javascript:return Validar(this);">
+      <h1>Regístrate</h1>
+      <div class="contenedor">
+      <div class="input-contenedor">
+        <i class="fas fa-user-alt"></i>
+        <input type="text" maxlength="35" name="Nombre" id="Nombre" required placeholder="Nombre completo"  maxlength="40" onblur="javascript:Validar();">
+      </div>
+
+      <div class="input-contenedor">
+        <i class="fas fa-envelope"></i>
+        <input type="text" id="Correo" name="Correo"  maxlength="40" required placeholder="Correo Electronico" onblur="javascript:Validar();">
+      </div>
+      <div class="input-contenedor">
+        <i class="fas fa-key"></i>
+        <input type="password" id="Contrasena" name="Contrasena"   min="1" maxlength="50" required placeholder="Contraseña" onblur="javascript:Validar();">
+      </div>
+      <div class="input-contenedor">
+        <i class="fas fa-key"></i>
+        <input type="password" id="Contrasena1" placeholder="Escribe nuevamente tu contraseña" name="Contrasena1" // min="1" maxlength="50" onblur="javascript:Validar();">
+      </div>
+      <div id="contenedorr">
+
+      </div>
+      <input type="submit" value="Regístrarse" class="button" >
+<center>
+<div id="alert">Hola</div><br>
+</center>
+
+      <a class="link" href="ingresar.php"><u><center>Iniciar sesion </center></u></a></p>
+
+      </div>
+      </form>
+      <script type="text/javascript">
+      function Validador(Correo){
+        var tester = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-]+)\.)+([a-zA-Z0-9]{3,18})+$/;
+        return tester.test(Correo);
+      }
+      //function Jalidar(){
+
+	//Almacenamos los valores
+	//Nombre=$('#Nombre').val();
+
+   //Comprobamos la longitud de caracteres
+	//if (Nombre.length<6){
+    //$('#alert').html('Por favor escribe un nombre').slideDown(500);
+    //$('#Nombre').focus();
+		//return true;
+	//}
+	//else {
+		//$('#alert').html('').slideUp(300);
+		//return false;
+
+	//}
+        function Validar(){
+        var Nombre = document.getElementById('Nombre').value;
+        var Correo = document.getElementById('Correo').value;
+        var Contrasena = document.getElementById('Contrasena').value;
+        var Contrasena1 = document.getElementById('Contrasena1').value;
+
+
+
+        if(Nombre.length<6){
+            $('#alert').html('Escribe  almenos un nombre y apellido').slideDown(500);
+            $('#Nombre').focus();
+            return false;
+    }
+    else {
+      $('#alert').html('').slideUp(300);
+    }
+
+    if(Correo==""){
+        $('#alert').html('Debes ingresar un correo').slideDown(500);
+        $('#Correo').focus();
+        return false;
+}
+else {
+  $('#alert').html('').slideUp(300);
+}
+if(Validador(Correo)==false){
+    $('#alert').html('Ingresa un email Valido').slideDown(500);
+    $('#Correo').focus();
+    return false;
+}
+else {
+$('#alert').html('').slideUp(300);
+}
+if(Contrasena==""){
+    $('#alert').html('Por favor ingresa una contraseña').slideDown(500);
+    $('#Contrasena').focus();
+    return false;
+}
+
+else {
+$('#alert').html('').slideUp(300);
+}
+if(Contrasena.length<6){
+    $('#alert').html('Al menos 8 caracteres').slideDown(500);
+    $('#Contrasena').focus();
+    return false;
+}
+else {
+$('#alert').html('').slideUp(300);
+}
+if(Contrasena1==""){
+    $('#alert').html('Escribe nuevamente tu Contraseña').slideDown(500);
+    $('#Contrasena1').focus();
+    return false;
+}
+else {
+$('#alert').html('').slideUp(300);
+}
+
+//if(Nombre.length<5){
+  //$('#alert').html('Esribe al menos un nombre y aplledio').slideDown(500);
+  //$('#Nombre').focus();
+  //return false;
+//}///else {
+//$('#alert').html('').slideUp(300);
+//}
+
+if(Contrasena1!=Contrasena){
+    $('#alert').html('Las contraseñas no coinciden').slideDown(500);
+    $('#Contrasena').val('');
+    $('#Contrasena1').val('');
+    $('#Contrasena').focus();
+    return false;
+}
+else {
+$('#alert').html('').slideUp(300);
+}
+ }
+      </script>
+</div>
+
+
+<div id="content-box-green"></div>
+  </body>
+</html>
